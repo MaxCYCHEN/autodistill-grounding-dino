@@ -7,7 +7,7 @@ with open("./autodistill_grounding_dino/__init__.py", 'r') as f:
     # from https://www.py4u.net/discuss/139845
     version = re.search(r'__version__\s*=\s*[\'"]([^\'"]*)[\'"]', content).group(1)
     
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
@@ -24,7 +24,7 @@ setuptools.setup(
         "autodistill",
         "numpy>=1.20.0",
         "opencv-python>=4.6.0",
-        "rf_groundingdino==0.2.0",
+        "rf_groundingdino",
         "rf_segment_anything",
         "supervision"
     ],
